@@ -1,34 +1,75 @@
 # shopITnow 🛍️
 
-A simple, fast, and modern e-commerce web application with Firebase Authentication and dynamic product displays[cite: 1, 5, 10, 14].
+A simple, fast, and modern e-commerce web application built with Firebase Authentication and dynamic product displays.
+
+🚀 **Live Demo:** [https://shopthisnow.netlify.app](https://shopthisnow.netlify.app)
 
 ---
 
 ## 🌟 Key Features
 
-- **User Accounts**: Easy sign-up and login with Email/Password or Google[cite: 1, 10, 14].
-- **Form Validation**: Instant feedback for missing fields or invalid entries[cite: 2, 14].
-- **Dynamic Products**: Products loaded automatically from a database[cite: 5, 14].
-- **Search & Filter**: Quickly find items by title or category[cite: 5, 14].
-- **Dark / Light Mode**: Toggle themes with a single click[cite: 1, 3].
+- **User Accounts:** Easy sign-up and login using Email/Password or Google OAuth.
+- **Form Validation:** Instant visual feedback for missing inputs or invalid credentials.
+- **Dynamic Product Display:** Items loaded automatically from a JSON backend database.
+- **Search & Filter:** Real-time product search by title or category.
+- **Dark / Light Mode:** Seamless theme toggling with glassmorphism design accents.
 
 ---
 
 ## 🛠️ Tech Stack
 
-- **HTML5 & CSS3** (Bootstrap 5 & Glassmorphism Design)[cite: 1, 3]
-- **JavaScript (ES6+)** (DOM Manipulation)[cite: 5, 14]
-- **Firebase Auth** (User Authentication)[cite: 10, 14]
-- **JSON API** (Product Catalog)[cite: 5, 6]
+- **HTML5 & CSS3:** Bootstrap 5 & Glassmorphism Design
+- **JavaScript (ES6+):** Vanilla JS DOM Manipulation
+- **Firebase Auth:** User Authentication & Session Handling
+- **JSON API:** Product Catalog Database
 
 ---
 
-## 🚀 Quick Start
+## 🚀 Getting Started & Setup
 
-1. **Clone the repository**:
-   ```bash
-   git clone [https://github.com/your-username/shopITnow.git](https://github.com/your-username/shopITnow.git)
+### 1. Clone the Repository
 
+```bash
+git clone https://github.com/your-username/shopITnow.git
+cd shopITnow
+```
 
-2. **Live Demo:** 🚀
-[https://shopthisnow.netlify.app](https://shopthisnow.netlify.app)
+### 2. Set Up Firebase Project
+
+1. Go to the [Firebase Console](https://console.firebase.google.com/) and click **Add project**.
+2. Name your project **shopITnow** and complete the wizard.
+3. On the project overview page, click the **Web icon (`</>`)** to register a new web application.
+4. Copy your unique `firebaseConfig` credentials object provided by Firebase.
+
+### 3. Configure Credentials Locally
+
+1. Open `auth/firebase-config.js` in your code editor.
+2. Replace the default configuration with your Firebase project credentials:
+
+```javascript
+const firebaseConfig = {
+  apiKey: "YOUR_FIREBASE_API_KEY",
+  authDomain: "YOUR_PROJECT_ID.firebaseapp.com",
+  projectId: "YOUR_PROJECT_ID",
+  storageBucket: "YOUR_PROJECT_ID.appspot.com",
+  messagingSenderId: "YOUR_MESSAGING_SENDER_ID",
+  appId: "YOUR_APP_ID"
+};
+
+// Initialize Firebase
+firebase.initializeApp(firebaseConfig);
+```
+
+### 4. Enable Authentication & Authorized Domains
+
+In the Firebase Console, navigate to;
+Build > Authentication > Sign-in method.
+
+Enable Email/Password and Google sign-in options.
+
+Go to Settings > Authorized domains and add your Netlify domain 
+(e.g., shopthisnow.netlify.app) as well as localhost.
+
+### 5. Run Locally
+
+Open index.html directly in your web browser or use the Live Server extension in VS Code.
