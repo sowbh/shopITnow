@@ -1,0 +1,21 @@
+.admin-table {
+  color: var(--text-color);
+  background: transparent;
+}
+
+.admin-table thead th {
+  color: var(--text-color);
+  background: rgba(255,255,255,0.1);
+}
+
+.admin-table tbody td {
+  color: var(--text-color);
+}
+
+.admin-table tbody tr {
+  background: transparent;
+}
+
+.admin-table tbody tr:hover {
+  background: rgba(255,255,255,0.1);
+}
