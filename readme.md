@@ -28,3 +28,7 @@ A simple, fast, and modern e-commerce web application with Firebase Authenticati
 1. **Clone the repository**:
    ```bash
    git clone [https://github.com/your-username/shopITnow.git](https://github.com/your-username/shopITnow.git)
+
+
+2. **Live Demo:** 🚀
+[https://shopthisnow.netlify.app](https://shopthisnow.netlify.app)
